@@ -1,5 +1,3 @@
-// 0-whatsmyname.c
-
 #include <stdio.h>
 
 /**
@@ -11,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-    (void)argc; // Unused parameter, suppresses compiler warning
+    (void)argc; 
 
     printf("%s\n", argv[0]);
 
