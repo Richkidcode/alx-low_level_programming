@@ -1,1 +1,1 @@
-learning about c programming
+0x09. C - Static librarieshhhhhing about c programming
