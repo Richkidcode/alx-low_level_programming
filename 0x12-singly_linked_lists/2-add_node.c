@@ -1,14 +1,7 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "list.h"
 
-/* Define the structure for a node in the linked list */
-typedef struct list_s {
-    char *str;
-    struct list_s *next;
-} list_t;
-
-/* Function to add a new node at the beginning of the linked list */
 list_t *add_node(list_t **head, const char *str) {
     if (str == NULL) {
         return NULL;
