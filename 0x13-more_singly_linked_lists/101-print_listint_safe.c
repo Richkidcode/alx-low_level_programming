@@ -45,7 +45,7 @@ size_t looped_listint_len(const listint_t *head)
 	return (0);
 
 }
- /**
+/**
  * print_listint_safe - prints a listint_list safely
  * @head: pointer to the first node
  * Return: number of nodes in list
