@@ -1,1 +1,1 @@
-0x0B. C - malloc, free
+[Malloc](https://blog.akshayraichur.com/how-malloc-works-in-c)
