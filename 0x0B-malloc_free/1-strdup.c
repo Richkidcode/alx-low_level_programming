@@ -1,14 +1,3 @@
-/**
- * @file 1-strdup.c
- * @author muhabeid
- * @brief 
- * @version 0.1
- * @date 2022-04-04
- * 
- * @copyright Copyright (c) 2022
- * 
- */
-
 #include "stdio.h"
 #include <stdlib.h>
 
