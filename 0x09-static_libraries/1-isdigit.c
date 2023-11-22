@@ -1,15 +1,18 @@
 #include "main.h"
 
 /**
- * _isdigit - return true if digit
- * @c:is the parameter
- * Return: 1 if sucess 0 on failure
+ * _isdigit - checks if value is a digit
+ * @c: value to be checked
+ * Return: 1 if true, 0 otherwise
  */
-
 int _isdigit(int c)
 {
-	if (c >= 48 && c <= 57)
-		return (1);
+	int res;
+
+	if (isdigit(c))
+		res = 1;
 	else
-		return (0);
+		res = 0;
+
+	return (res);
 }

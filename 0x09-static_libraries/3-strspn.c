@@ -1,30 +1,12 @@
 #include "main.h"
 
 /**
- * _strspn - gets prefix length
- * @s:segment in accept
- * @accept : contains s
- * Return: n
+ * _strspn - idk how to explain this one
+ * @s: string to check
+ * @accept: accept value?
+ * Return: number of bytes in initial segment of s
  */
-
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int n = 0;
-	int i;
-
-	while (*s)
-	{
-		for (i = 0 ; accept[i] ; i++)
-		{
-			if (*s == accept[i])
-			{
-				n++;
-				break;
-			}
-			else if (accept[i + 1] == '\0')
-				return (n);
-		}
-		s++;
-	}
-	return (n);
+	return (strspn(s, accept));
 }

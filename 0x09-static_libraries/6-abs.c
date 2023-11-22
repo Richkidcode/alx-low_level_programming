@@ -1,19 +1,12 @@
 #include "main.h"
 
 /**
- * _abs -to find the absolute value of a number
- * @a:function parameter
- * Return: -a , 0 or a
+ * _abs - returns absolute value of the number input
+ * @x: number to be absoluted
+ *
+ * Return: returns absolute value
  */
-
-int _abs(int a)
+int _abs(int x)
 {
-	if (a < 0)
-		return (-a);
-	else if (a >= 0)
-	{
-		return (a);
-	}
-	return (0);
-
+	return (abs(x));
 }
