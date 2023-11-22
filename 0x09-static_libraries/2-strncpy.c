@@ -1,24 +1,13 @@
 #include "main.h"
-/**
- * _strncpy - copies src to dest
- * @dest: destination
- * @src:source
- * @n:maximum
- * Return:dest
- */
 
+/**
+ * _strncpy - copies from src to dest using at most n bytes
+ * @dest: destination string to copy to
+ * @src: source string to copy from
+ * @n: max number of bytes of src
+ * Return: string
+ */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i;
-
-	for (i = 0 ; i < n && src[i] != '\0' ; i++)
-	{
-		dest[i] = src[i];
-	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	return (strncpy(dest, src, n));
 }

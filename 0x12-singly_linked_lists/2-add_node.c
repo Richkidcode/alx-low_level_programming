@@ -1,31 +1,42 @@
 #include <stdlib.h>
 #include <string.h>
-#include "list.h"
+#include <stdio.h>
+#include "lists.h"
 
-list_t *add_node(list_t **head, const char *str) {
-    if (str == NULL) {
-        return NULL;
-    }
+/**
+ * _strlen - function that returns the length of a string.
+ * @s : s is a character
+ * Return: value is i
+ */
+int _strlen(const char *s)
+{
+	int i = 0;
 
-    /* Allocate memory for the new node */
-    list_t *new_node = malloc(sizeof(list_t));
-    if (new_node == NULL) {
-        return NULL;  // Allocation failed
-    }
-
-    /* Duplicate the input string using strdup */
-    new_node->str = strdup(str);
-    if (new_node->str == NULL) {
-        free(new_node);  // String duplication failed, free the allocated node
-        return NULL;
-    }
-
-    /* Set the next pointer to the current head of the list */
-    new_node->next = *head;
-
-    /* Update the head to point to the new node */
-    *head = new_node;
-
-    return new_node;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 
+/**
+ * add_node - add a new node at beginning of a list_t list.
+ * @head: head of a list_t list.
+ * @str: value to insert into element.
+ * Return: the number of nodes.
+ */
+list_t *add_node(list_t **head, const char *str)
+{
+	list_t *add;
+
+	add = malloc(sizeof(list_t));
+	if (add == NULL)
+		return (NULL);
+	add->str = strdup(str);
+
+	add->len = _strlen(str);
+	add->next = *head;
+	*head = add;
+
+	return (add);
+}

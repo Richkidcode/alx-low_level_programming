@@ -1,24 +1,12 @@
 #include "main.h"
 
 /**
- * _strpbrk -  locates first instance of s
- * @s: input
- * @accept: another input
- * Return: always 0
+ * _strpbrk - locate first occurence of accept in s
+ * @s: string to check
+ * @accept: value to look for
+ * Return: pointer to byte in s that matches one of the bytes in accept
  */
-
 char *_strpbrk(char *s, char *accept)
 {
-	int p;
-
-	while (*s)
-	{
-		for (p = 0 ; accept[p] ; p++)
-		{
-			if (*s == accept[p])
-				return (s);
-		}
-	s++;
-	}
-	return ('\0');
+	return (strpbrk(s, accept));
 }
